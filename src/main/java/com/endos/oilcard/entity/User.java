@@ -2,54 +2,50 @@ package com.endos.oilcard.entity;
 
 import java.util.Date;
 
-/**
- * 用户信息实体类
- * Created by Endos on 2017/9/4.
- */
 public class User {
-    private Integer id;
+    private Integer userId;
 
     private String username;
 
     private String password;
 
-    private String email;
-
     private String phone;
 
-    private String question;
-
-    private String answer;
+    private Date regTime;
 
     private Integer role;
 
-    private Date createTime;
+    private String sex;
 
-    private Date updateTime;
+    private String licensePlate;
 
-    public User(Integer id, String username, String password, String email, String phone, String question, String answer, Integer role, Date createTime, Date updateTime) {
-        this.id = id;
+    private String carModels;
+
+    private Date lastLoginTime;
+
+    public User(Integer userId, String username, String password, String phone, Date regTime, Integer role, String sex, String licensePlate, String carModels, Date lastLoginTime) {
+        this.userId = userId;
         this.username = username;
         this.password = password;
-        this.email = email;
         this.phone = phone;
-        this.question = question;
-        this.answer = answer;
+        this.regTime = regTime;
         this.role = role;
-        this.createTime = createTime;
-        this.updateTime = updateTime;
+        this.sex = sex;
+        this.licensePlate = licensePlate;
+        this.carModels = carModels;
+        this.lastLoginTime = lastLoginTime;
     }
 
     public User() {
         super();
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getUsername() {
@@ -68,14 +64,6 @@ public class User {
         this.password = password == null ? null : password.trim();
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
-
     public String getPhone() {
         return phone;
     }
@@ -84,20 +72,12 @@ public class User {
         this.phone = phone == null ? null : phone.trim();
     }
 
-    public String getQuestion() {
-        return question;
+    public Date getRegTime() {
+        return regTime;
     }
 
-    public void setQuestion(String question) {
-        this.question = question == null ? null : question.trim();
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer == null ? null : answer.trim();
+    public void setRegTime(Date regTime) {
+        this.regTime = regTime;
     }
 
     public Integer getRole() {
@@ -108,35 +88,35 @@ public class User {
         this.role = role;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public String getSex() {
+        return sex;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setSex(String sex) {
+        this.sex = sex == null ? null : sex.trim();
     }
 
-    public Date getUpdateTime() {
-        return updateTime;
+    public String getLicensePlate() {
+        return licensePlate;
     }
 
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate == null ? null : licensePlate.trim();
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", question='" + question + '\'' +
-                ", answer='" + answer + '\'' +
-                ", role=" + role +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
-                '}';
+    public String getCarModels() {
+        return carModels;
+    }
+
+    public void setCarModels(String carModels) {
+        this.carModels = carModels == null ? null : carModels.trim();
+    }
+
+    public Date getLastLoginTime() {
+        return lastLoginTime;
+    }
+
+    public void setLastLoginTime(Date lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
     }
 }
